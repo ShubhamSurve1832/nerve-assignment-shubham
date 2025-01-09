@@ -77,7 +77,7 @@ export default function Home() {
               })
             ) : (
               <div className="default-box">
-                <p>No strategies found for {selectedDate} in {selectedView}.</p>
+                <p>There are no strategies for <br/> <strong> {selectedDate} </strong> <br/> in  {selectedView}.</p>
               </div>
             )}
           </div>
