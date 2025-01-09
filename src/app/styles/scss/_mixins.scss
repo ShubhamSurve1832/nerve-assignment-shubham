@@ -1,0 +1,11 @@
+@mixin breakpoint($type, $value){
+	@if type_of($type) == string{
+		@media only screen and (#{$type}-width: $value){
+			@content;
+		}
+	}@else{
+		@media only screen and (min-width: $type) and (max-width: $value){
+			@content;
+		}
+	}
+}

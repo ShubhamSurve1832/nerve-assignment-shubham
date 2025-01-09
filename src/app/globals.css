@@ -6,6 +6,18 @@
   --background: #ffffff;
   --foreground: #171717;
 }
+html {
+  /* font-family: var(--font-Urbanist) !important; */
+  scroll-behavior: smooth;
+  font-size: 90%;
+}
+body {
+  min-height: 100vh;
+  /* font-family: var(--font-Urbanist) !important; */
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+  color: #150C0B;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
