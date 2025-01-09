@@ -7,7 +7,7 @@
         @include breakpoint(max, 500px){width: 60%;}   
 
         .slick-slider{
-        @include breakpoint(max,500px){padding-inline: 1rem;}   
+            @include breakpoint(max,500px){padding-inline: 1rem;}   
         }
         .slick-initialized .slick-slide{margin-inline: 0.5rem;
             @include breakpoint(max, 480px){margin-inline: 0;}   
@@ -20,6 +20,7 @@
         @include breakpoint(max,768px){width: 80%;}   
         @include breakpoint(max,500px){width: 90%;}   
         .select-tab{width: 40%; margin-inline: auto; margin-top: 1rem;
+            @include breakpoint(max,500px){width: 50%;}   
             select{width: 100%; margin-block: 2rem; font-size: 1rem; border: 0.5px solid #c9bebe; border-radius: 8px; padding: 0.5rem 1rem; &:focus{outline: none;}
             @include breakpoint(max,500px){margin-block: 1rem;}   
         }
