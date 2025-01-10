@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Slider from "react-slick";
 import { COMMON_SETTINGS } from "./config/constants";
-import { views, dateArray, strategyArray } from "./config/data";
+import { dateArray, strategyArray } from "./config/data";
 
 const tabSlider = COMMON_SETTINGS({
   dots: false,
@@ -24,6 +24,9 @@ export default function Home() {
     strategyArray.find((item) => item.View === selectedView)?.Value[
     selectedDate
     ] || [];
+
+  const views = strategyArray.map((view)=>view.View)
+  console.log(views)
 
   return (
     <section>

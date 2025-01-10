@@ -1,7 +1,7 @@
 .container{width: 70%; margin: 2rem auto;padding-block: 2rem;box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2),
     0 6px 20px rgba(0, 0, 0, 0.15);    border-radius: 8px;
     @include breakpoint(max, 1280px){width: 90%;}   
-    .tab-container{padding-block: 1rem;width: 50%; margin:0 auto;backdrop-filter: blur(10px); background-color: #f2f4f8; border-radius: 12px;
+    .tab-container{padding-block: 0.5rem;width: 50%; margin:0 auto;backdrop-filter: blur(10px); background-color: #f2f4f8de; border-radius: 12px;
         @include breakpoint(max, 1280px){width: 60%;}   
         @include breakpoint(max,768px){width: 80%;}   
         @include breakpoint(max, 500px){width: 60%;}   
@@ -13,7 +13,8 @@
             @include breakpoint(max, 480px){margin-inline: 0;}   
         }
         .slick-track{width: max-content !important  ;}
-        button.tabs{padding: 0.5rem; background-color: #a2a0a0b8;color: #fff;font-size: 1.1rem; border-radius: 8px; &.active{background-color: blue;}}         
+        button.tabs{padding: 0.5rem;color: #a2a0a0b8;font-size: 1rem;font-weight: 
+            600; border-radius: 16px; &.active{background-color: blue; color: #fff;}}         
         .slick-prev:before, .slick-next:before{color: #000;}
     }
     .data-container{width: 75%; margin: 0 auto;
@@ -21,13 +22,14 @@
         @include breakpoint(max,500px){width: 90%;}   
         .select-tab{width: 40%; margin-inline: auto; margin-top: 1rem;
             @include breakpoint(max,500px){width: 50%;}   
-            select{width: 100%; margin-block: 2rem; font-size: 1rem; border: 0.5px solid #c9bebe; border-radius: 8px; padding: 0.5rem 1rem; &:focus{outline: none;}
+            select{width: 100%; margin-block: 1.5rem; font-size: 1rem; border: 0.5px solid #c9bebe; border-radius: 8px; padding: 0.5rem 1rem; &:focus{outline: none;}
             @include breakpoint(max,500px){margin-block: 1rem;}   
         }
         }
         .data-box{height: 70vh; overflow:scroll ;overflow-x: hidden; padding-right: 1rem;
-            .column {display: flex;justify-content: space-between; align-items: center;border: 1px solid #ccc;border-radius: 5px;padding: 10px; margin-block: 1rem;
-            p{color: #808080;}
+            .column {display: flex;justify-content: space-between; align-items: center;border: 1px solid #ccc;border-radius: 14px;padding: 10px; margin-block: 1rem; font-size: 1rem;
+                h4{font-weight: 700;}
+                p{color: #808080;}
             }
         } 
         .default-box{height: 50vh; display: flex; align-items: center;justify-content: center;
