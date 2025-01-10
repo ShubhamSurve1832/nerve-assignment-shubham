@@ -20,13 +20,11 @@ export default function Home() {
   const [selectedDate, setSelectedDate] = useState(dateArray[0]);
   const [activeSlide, setActiveSlide] = useState(0);
 
-  const strategies =
-    strategyArray.find((item) => item.View === selectedView)?.Value[
-    selectedDate
-    ] || [];
+  const strategies = strategyArray.find((item) => item.View === selectedView)?.Value[selectedDate] || [];
+  console.log("strategies",strategies)
 
-  const views = strategyArray.map((view)=>view.View)
-  console.log(views)
+  const views = strategyArray.map((view) => view.View)
+  console.log("views",views)
 
   return (
     <section>
@@ -67,23 +65,28 @@ export default function Home() {
 
           <div className="data-box custom-scrollbar">
             {strategies.length > 0 ? (
-              strategies.map((strategy, index) => {
-                const count = strategies.filter((s) => s === strategy).length;
+              [...new Set(strategies)].map((uniqueStrategy) => {
+                const count = strategies.filter((s) => s === uniqueStrategy).length;
                 return (
-                  <div className="column"
-                    key={index}
-                  >
-                    <h4>{strategy}</h4>
-                    <p>{count} {count === 1 ? "Strategy" : "Strategies"}</p>
+                  <div className="column" key={uniqueStrategy}>
+                    <h4>{uniqueStrategy}</h4>
+                    <p>
+                      {count} {count === 1 ? "Strategy" : "Strategies"}
+                    </p>
                   </div>
                 );
               })
             ) : (
               <div className="default-box">
-                <p>There are no strategies for <br/> <strong> {selectedDate} </strong> <br/> in  {selectedView}.</p>
+                <p>
+                  There are no strategies for <br />
+                  <strong>{selectedDate}</strong> <br />
+                  in {selectedView}.
+                </p>
               </div>
             )}
           </div>
+
         </div>
       </div>
     </section>
